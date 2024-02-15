@@ -5,18 +5,12 @@ import PropTypes from "prop-types";
 
 import "./style.scss";
 
-const Select = ({
-  selection,
-  onChange,
-  name,
-  titleEmpty,
-  label,
-  type = "normal",
-}) => {
+const Select = ({ selection, onChange, name, titleEmpty, label, type = "normal", }) => {
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    onChange();
+    // Ajout de l'argument newValue a onchange pour prendre en compte les actions dans la partie filtre
+    onChange(newValue);
     setValue(newValue);
     setCollapsed(newValue);
   };
