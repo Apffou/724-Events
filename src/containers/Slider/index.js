@@ -20,6 +20,7 @@ const Slider = () => {
       5000
     );
   };
+
   useEffect(() => {
     nextCard();
   });
@@ -45,12 +46,13 @@ const Slider = () => {
           </div>
           <div className="SlideCard__paginationContainer">
             <div className="SlideCard__pagination">
+              {/* Changement de idx par index pour suivre la bonne image */}
               {byDateDesc.map((_, radioIdx) => (
                 <input
                   key={`${event.id}`}
                   type="radio"
                   name="radio-button"
-                  checked={idx === radioIdx}
+                  checked={index === radioIdx}
                 />
               ))}
             </div>
