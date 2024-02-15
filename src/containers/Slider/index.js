@@ -46,7 +46,7 @@ const Slider = () => {
           </div>
           <div className="SlideCard__paginationContainer">
             <div className="SlideCard__pagination">
-              {/* Changement de idx par index pour suivre la bonne image */}
+              {/* Changement de idx par index (useState) pour suivre la bonne image */}
               {byDateDesc.map((_, radioIdx) => (
                 <input
                   key={`${event.id}`}
